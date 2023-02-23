@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title translatable="titulo-app">OCR + Tradutor</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/file-text-line.png">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/home.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+</head>
+
+<body class=""  onload="translate('pt','translatable')">
+  <header class="border-bottom p-4 px-5 d-flex align-items-center">
+    <a class="text-dark" href="home.html" style="text-decoration: none;">
+      <div class="d-flex flex-row" style="height: 24px;">
+        <img src="assets/images/file-text-line.png" alt="">
+        <h5 class=" me-5" translatable="titulo-app">OCR - TRADUTOR</h5>
+      </div>
+    </a>
+    <div class="" style="margin-left: 10%;">
+      <a class="button-home" translatable="inicio" href="home.html">Inicio</a>
+      <a class="button-historico" id="btn-hist" translatable="historico-traducoes" href="historico.html">Histórico de Traduções</a>
+      <a class="button-username" id="link-perfil" translatable="perfil" href="perfil.html">Perfil de usuário</a>
+    </div>
+
+    <div class="d-flex flex-row" style="margin-left: 15%;">
+      <div class="lista-idioma px-3">
+        <a class="btn btn-outline-primary active" data-value="pt" href="#">PT</a>
+        <a class="btn btn-outline-primary" data-value="en" href="#">EN</a>
+        <a class="btn btn-outline-primary"data-value="fr" href="#">FR</a>
+      </div>
+
+      <a class="btn btn-outline-danger" id="btn-sair" translatable="btn-sair" href="index.html">Sair</a>
+    </div>
+  </header>
+
+
+  <div class="container py-5 ">
+
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade active show" id="pills-ocr" role="tabpanel" aria-labelledby="pills-ocr-tab"
+        tabindex="0">
+        <div class="ocr-container " id="ocr">
+          <h1 class="mb-5 mt-4 text-center" translatable="titulo-app">OCR + TRADUTOR</h1>
+
+          <div class="outpic col-12 col-md-5 me-md-5 w-100" style="padding:30px 0;">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <div class=" d-flex justify-content-center align-items-center">
+                <img class="mb-4" id="output" height="270" width="250" alt="picture"
+                  src="assets/images/image_placeholder.png" />
+              </div>
+              <div class="row align-items-center">
+                <div class="col-12 col-md-8" >
+                  <input class="form-control" type="file" id="file" required accept="image/gif, image/jpeg, image/png"
+                  onchange="loadFile(event)" />
+                </div>
+
+                <div class="col-12 col-md-4">
+                  <button class="btn btn-primary px-4 m-5" translatable="btn-iniciar" style="width:160px ;" type="button" name="form" id="submit"  onclick="recognizeFunction()"><i>Iniciar</i></button>
+                </div>
+
+              </div>
+              
+                
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+      </div>
+
+
+      <div class="tab-pane fade active show" id="pills-translator" role="tabpanel"
+        aria-labelledby="pills-translator-tab" tabindex="0">
+
+        <div class="translator-container row" id="translator">
+
+
+          <div class="translator1  col-12 col-md-6">
+            <div class="form-floating">
+              <select class="form-select from_language" id="floatingSelect" aria-label="Floating label select example">
+                <option translatable="idioma-pt" value="pt">Português</option>
+                <option translatable="idioma-fr"value="fr">Francês</option>
+                <option translatable="idioma-it" value="it">Italiano</option>
+                <option translatable="idioma-en" value="en">Inglês</option>
+                <option translatable="idioma-es" value="es">Espanhol</option>
+              </select>
+              <label translatable="traduzir-de" for="floatingSelect">Traduzir de:</label>
+            </div>
+            <textarea id="texto-origem" class="form-control mt-4" rows="10" cols="100" ></textarea>
+          </div>
+
+          <div class="translator2  col-12 col-md-6 d-flex flex-column justify-content-center">
+            <div class="form-floating">
+              <select class="form-select to_language" id="floatingSelect" aria-label="Floating label select example">
+                <option translatable="idioma-pt" value="pt">Português</option>
+                <option translatable="idioma-fr"value="fr">Francês</option>
+                <option translatable="idioma-it" value="it">Italiano</option>
+                <option translatable="idioma-en" value="en">Inglês</option>
+                <option translatable="idioma-es" value="es">Espanhol</option>
+              </select>
+              <label translatable="traduzir-para" for="floatingSelect">Traduzir para:</label>
+            </div>
+
+            <textarea id="texto-destino" class="form-control mt-4" rows="10" cols="100" ></textarea>
+          </div>
+
+          <div class="d-flex justify-content-center align-items-center">
+            <button class="btn btn-primary px-4 m-5" id="btn-traduzir" 
+            translatable="btn-traduzir" 
+            style="width:160px ;" 
+            type="button" name="form" >Traduzir</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/tesseract.js@v2.0.0-alpha.13.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery-3.6.2.min.js"></script>
+  <script src="assets/js/index.js"></script>
+  <script src="assets/js/tradutor.js"></script>
+  <script src="assets/js/main.js"></script>
+
+
+
+
+
+</body>
+
+</html>

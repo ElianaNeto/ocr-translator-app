@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCR - cadastro</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/file-text-line.png">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/cadastro.css" />
+
+
+
+</head>
+
+<body>
+
+  <header class="border-bottom  p-4 px-5 d-flex align-items-center">
+    <a class="text-dark" href="home.html" style="text-decoration: none;">
+      <div class="d-flex flex-row" style="height: 24px;">
+        <img src="assets/images/file-text-line.png" alt="">
+        <h5 class=" me-5" translatable="titulo-app">OCR - TRADUTOR</h5>
+      </div>
+    </a>
+   
+
+      <div class="lista-idioma px-5" style="margin-left: 55%;">
+        <a class="btn btn-outline-primary active" data-value="pt" href="#">PT</a>
+        <a class="btn btn-outline-primary" data-value="en" href="#">EN</a>
+        <a class="btn btn-outline-primary"data-value="fr" href="#">FR</a>
+      </div>
+    
+  </header>
+
+
+  <div class="d-flex flex-column align-items-center justify-content-center cointainer py-5">
+
+    <h5 class="mb-4 text-center" translatable="titulo-cadastro">CADASTRO</h5>
+
+    <div class="p-4 d-flex justify-content-center pb-4 content-box d-flex flex-column justify-content-center" style="width: 430px; min-height: 400px; height: auto"">
+      <div class="row width: 26rem;">
+       
+        <div class="tab-content">
+        
+          <div class="tab-pane fade show active" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+            <form>
+              <div class="form-outline mb-4">
+                <label class="form-label" for="registerName" translatable="nome-user2">Nome completo</label>
+                <input type="text" id="registerName" class="form-control" />
+              </div>
+
+              <div class="form-outline mb-4">
+                <label class="form-label" for="registerUsername" translatable="nome-user">Nome de usuário</label>
+                <input type="text" id="registerUsername" class="form-control" />
+              </div>
+
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <label class="form-label" for="registerEmail" translatable="email-user">Email</label>
+                <input type="email" id="registerEmail" class="form-control" />
+              </div>
+
+              <div class="form-outline mb-4">
+                <label for="lang" class="form-label" translatable="idioma-padrao">Lingaugem padrão</label>
+                <select required="" id="lang" name="lang" class="form-select border-1 mb-4">
+                  <option translatable="idioma-pt" value="pt">Português</option>
+                  <option translatable="idioma-fr"value="fr">Francês</option>
+                  <option translatable="idioma-it" value="it">Italiano</option>
+                  <option translatable="idioma-en" value="en">Inglês</option>
+                  <option translatable="idioma-es" value="es">Espanhol</option>
+           
+                </select>
+              </div>
+              <div class="form-outline mb-4">
+                <label class="form-label" for="registerPassword" translatable="senha-user">Senha</label>
+                <input type="password" id="registerPassword" class="form-control" />
+              </div>
+
+              <div class="row mb-4">
+                <div class="col-md-6 d-flex justify-content-center">
+                
+                  <div class="mb-3 mb-md-0">
+                    <button id="btn-cadastro" type="submit" class="btn btn-primary btn-block mb-3" translatable="btn-login" >Entrar</button>
+                  </div>
+                </div>
+        
+                <div class="col-md-6 d-flex justify-content-center">
+                  <!-- Simple link -->
+                  <a class="button-cancelar" translatable="btn-cancelar"  href="index.html">Cancelar</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+
+
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery-3.6.2.min.js"></script>
+  <script src="assets/js/index.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/tradutor.js"></script>
+</body>
+
+</html>

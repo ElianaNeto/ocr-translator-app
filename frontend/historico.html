@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCR - Histórico</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/file-text-line.png">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+
+</head>
+
+<body>
+  <header class="border-bottom p-4 px-5 d-flex align-items-center">
+    <a class="text-dark" href="home.html" style="text-decoration: none;">
+      <div class="d-flex flex-row" style="height: 24px;">
+        <img src="assets/images/file-text-line.png" alt="">
+        <h5 class=" me-5" translatable="titulo-app">OCR - TRADUTOR</h5>
+      </div>
+    </a>
+    <div class="header-btn" style="margin-left: 10%;">
+      <a class="button-home"  translatable="inicio" href="home.html">Inicio</a>
+      <a class="button-historico"  id="btn-hist"  translatable="historico-traducoes" href="historico.html">Histórico de Traduções</a>
+      <a class="button-username" id="link-perfil" translatable="perfil" href="perfil.html">Perfil de usuário</a>
+    </div>
+
+    <div class="d-flex flex-row" style="margin-left: 15%;">
+      <div class="lista-idioma px-3">
+        <a class="btn btn-outline-primary active" data-value="pt" href="#">PT</a>
+        <a class="btn btn-outline-primary" data-value="en" href="#">EN</a>
+        <a class="btn btn-outline-primary"data-value="fr" href="#">FR</a>
+      </div>
+
+      <a class="btn btn-outline-danger" id="btn-sair" translatable="btn-sair" href="index.html">Sair</a>
+    </div>
+  </header>
+  
+  <div class="my-5 container">
+    <div id="card-traducoes"></div>
+  </div>
+
+
+
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery-3.6.2.min.js"></script>
+  <script src="assets/js/index.js"></script>
+  <script src="assets/js/tradutor.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/historico.js"></script>
+
+
+</body>
+</html>

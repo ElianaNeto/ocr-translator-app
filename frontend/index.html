@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCR - Tradutor</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/file-text-line.png">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+
+<body>
+  <header class=" p-4 px-5 d-flex align-items-center">
+    <div class="d-flex flex-row" style="height: 24px;">
+      <img src="assets/images/file-text-line.png" alt="">
+      <h5 class=" me-5" translatable="titulo-app">OCR-TRADUTOR</h5>
+    </div>
+
+      <div class="lista-idioma px-5" style="margin-left: 55%;">
+        <a class="btn btn-outline-primary active" data-value="pt" href="#">PT</a>
+        <a class="btn btn-outline-primary" data-value="en" href="#">EN</a>
+        <a class="btn btn-outline-primary"data-value="fr" href="#">FR</a>
+      </div>
+    
+  </header>
+
+  <main style="margin-top:15%">
+    <center>
+
+      <div class="m-5 start-title">
+        <h1 translatable="main-titulo">Transforma imagem em palavras!</h1>
+      </div>
+
+      <div>
+        <a class="button-login" translatable="btn-login" href="login.html">Entrar</a>
+        <a class="button-cadastro bg-primary" translatable="btn-cadastro" href="cadastro.html">Cadastrar</a>
+      </div>
+  </main>
+
+
+  <script src="assets/js/tesseract.js@v2.0.0-alpha.13.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery-3.6.2.min.js"></script>
+  <script src="assets/js/index.js"></script>
+  <script src="assets/js/tradutor.js"></script>
+</body>
+
+</html>
